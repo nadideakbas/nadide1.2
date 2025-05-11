@@ -1,0 +1,208 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+#metin{
+    margin: 10px;
+}
+#hak{
+    color:darkblue;
+}
+#seh{
+    color:darkblue;
+}
+#miras{
+    color: darkblue;
+}
+#ilgi{
+    color:darkblue;
+}
+#iletisim{
+    color: darkblue;
+}
+
+#iletisim:hover{
+      
+  background-color: rgb(0, 217, 255);
+  color:darkblue;
+}
+#hak:hover{
+  
+  background-color: rgb(0, 217, 255);
+  color:darkblue;
+}
+#seh:hover{
+      
+  background-color: rgb(0, 217, 255);
+  color:darkblue;
+
+}
+#miras:hover{
+      
+  background-color: rgb(0, 217, 255);
+  color:darkblue;
+}
+#ilgi:hover{
+      
+  background-color: rgb(0, 217, 255);
+  color:darkblue;
+}
+#film{
+    color: darkblue;
+}
+#film:hover{
+    background-color: rgb(0, 217, 255);
+    color:darkblue;
+}
+.container-fluid{
+    background-color:rgb(196, 228, 255);
+}
+#h4{
+    margin-top:50px;
+}
+#h41{
+    margin-left: 200px;
+    margin-bottom: 15px;
+    color: darkblue;
+}
+#img{
+    width: 600px;
+     height: 600px; 
+     margin: 30px;
+     border-radius: 15px;
+     border-color:darkblue;
+     border-style:inset;
+}
+#ad{
+    border-color:darkblue;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+#soyad{
+    border-color:darkblue;
+    border-radius: 5px;
+    margin-left:100px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+#iletişim{
+    border-color:darkblue;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+#h42{
+    margin-left: 180px;
+    color: darkblue;
+    margin-top: 50px;
+
+}
+#h61{
+    margin-left: 180px;
+    margin-top: 20px;
+}
+#h62{
+    margin-left: 180px;
+    margin-top: -50px;
+}
+#icon2{
+    margin-left: 300px;
+    margin-top: -28px;
+}
+#icon1{
+    color:black;
+    width: 100px;
+    height: 100px;
+    margin-left: 300px;
+    margin-top: -30px;
+}
+#icon1:hover{
+    color: darkblue;
+}
+#icon2:hover{
+    color:darkblue;
+}
+#icon3:hover{
+    color:darkblue;
+}
+#icon4:hover{
+    color:darkblue;
+}
+#h63{
+    margin-left:180px;
+    margin-top:20px;
+}
+#h64{
+    margin-left: 180px;
+    margin-top: 20px;
+}
+#icon3{
+    margin-left: 300px;
+    margin-top:-30px;
+}
+#icon4{
+    margin-left: 300px;
+    margin-top:-30px;
+}
+
+#btn{
+    background-color: darkblue;
+    color: darkblue;
+    margin-left: 260px;
+    border-radius: 10px;
+    height: 30px;
+    width: 150px;
+}
+#btn:hover{
+    background-color:darkblue;
+}
+.api{
+    background-color: darkblue;
+}
+.results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.result{
+    background-color: rgb(187, 147, 98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:10px;
+    height: 400px;
+    width: 300px;
+}
+.result img{
+    object-fit: cover;
+    height: 100%;
+    width:100%;
+}
+.buttons{
+    background-color: bisque;
+}
+
+.buttons button{
+    background-color: brown;
+    border:0;
+    border-radius: 4px;
+    color:black;
+}
+button:active{
+    transform: scale(0.98);
+}
+button:focus{
+    outline:none;
+}
+#cat_btn{
+    margin-left:650px;
+}
+#iletisim2{
+    color:black;
+}
+#iletiisim2:hover{
+    background-color: brown;
+    color:black;
+}
