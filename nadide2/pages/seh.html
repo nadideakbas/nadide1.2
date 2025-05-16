@@ -1,184 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/seh.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> <!-- bootstrap eklendi-->
-  </head>
-    <title>ŞEHRİM</title>
-</head>
-<body style="background-color: rgb(196, 228, 255);">
-    <div class="container-fluid">
-         <div class="row">
-          <div class="col-12 ">
-            <header class="center" style="margin-left:650px; color:darkblue; "> SAYFAMA HOŞGELDİNİZ 
-            </header>
-          </div>
-         </div>
-    </div>
-
-   <div class="container-fluid" >
-    <nav class="nav nav-pills nav-fill">
-        <a class="nav-item nav-link " id="hak" href="/pages/index.html" >HAKKIMDA</a>
-        <a class="nav-item nav-link" id="seh" href="/pages/seh.html" >ŞEHRİM</a>
-        <a class="nav-item nav-link" id="miras" href="/pages/miras.html" >KÜLTÜREL MİRASIMIZ</a>
-        <a class="nav-item nav-link " id="ilgi" href="/pages/ilgi.html" >İLGİ ALANLARIM</a>
-        <a class="nav-item nav-link " id="gül" href="/pages/film.html" id="film" >FİLM</a>
-        <a class="nav-item nav-link " href="form.html" id="iletisim">İLETİŞİM</a>
-        <a class="nav-item nav-link" href="http://localhost:3000/" id="iletisim2">İLETİŞİM2 </a>
-      </nav>
-   </div>
-
-<!-- Slider ekleme-->
- <div class="slideshow-container">
-  <div class="slide"><img src="/image/Izmir-Saat-Kulesi-1.jpg" alt="Resim 1" style="width:100%">
-  <div class="number-text">1 / 6</div>
-  <div class="caption-text">İzmir Saat Kulesi</div>
-  </div>
-  <div class="slide"><img src="/image/tarihi kemer alti carsi izmir.jpg" alt="Resim 2" style="width:100%">
-  <div class="number-text">2 / 6</div>
-  <div class="caption-text">Tarihi Kemeraltı Çarşısı</div>
-  </div>
-  <div class="slide"><img src="/image/06_CesmeIlicaPlaji.jpg" alt="Resim 3" style="width:100%">
-  <div class="number-text">3 / 6</div>
-  <div class="caption-text">İzmir Plajları</div>
-  </div>
-  <div class="slide"><img src="/image/boyoz.jpg" alt="Resim 4" style="width:100%">
-  <div class="number-text">4 / 6</div>
-  <div class="caption-text">Boyoz</div>
-  </div>
-  <div class="slide"><img src="/image/lokma.jpg" alt="Resim 5" style="width:100%">
-  <div class="number-text">5 / 6</div>
-  <div class="caption-text">Lokma</div>
-  </div>
-  <div class="slide"><img src="/image/sardalya.jpg" alt="Resim 6" style="width:100%">
-  <div class="number-text">6 / 6</div>
-  <div class="caption-text">Ünlü Ege Sardalyası</div>
-  </div>
-  
-
-  <!-- Ok butonları -->
-  <a class="prev" onclick="changeSlide(-1)">❮</a>
-  <a class="next" onclick="changeSlide(1)">❯</a>
-</div>
-
-
-<script>
-  let slideIndex = 1;
-  showSlide(slideIndex);
-
-  function changeSlide(n) {
-    showSlide(slideIndex += n);
-  }
-
-  function showSlide(n) {
-    const slides = document.getElementsByClassName("slide");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ŞEHRİM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    body {
+      background-color: rgb(196, 228, 255);
     }
-    slides[slideIndex - 1].style.display = "block";
-  }
-</script>
-<!--sliderların sıralı açıklamaları-->
-<div class="container-fluid">
-   <div class="row" >
-       <div class="col-6" style="background-color:rgb(196, 228, 255); width: 700px; height: 700px;">
-       </div>
-       <div class="col-6">
-        <div id="metin" >
-            <h4 id="h4">İzmir saat Kulesi</h4>
-            <p style="margin-top: 60px;">SAAT KULESİ
-            </p>
-        </div>
-          
-       </div>
-   </div>
- </div>
- <div class="container-fluid">
-  <div class="row" >
-      <div class="col-6" style="background-color: rgb(196, 228, 255); width: 700px; height: 700px;">
-      </div>
-      <div class="col-6">
-       <div id="metin2" >
-           <h4 id="h4">Tarihi KEmeraltı çarşısı</h4>
-           <p style="margin-top: 60px;"> Tarihi KEmeraltı çarşısı
-                     
-           </p>
-         
-      </div>
+
+    header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 2rem 0;
+      color: #003366;
+    }
+
+    .slideshow-container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      padding: 10px;
+      color: white;
+      background-color: rgba(0,0,0,0.5);
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .caption-text, .number-text {
+      position: absolute;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .caption-text {
+      bottom: 8px;
+      left: 16px;
+    }
+
+    .number-text {
+      top: 8px;
+      right: 16px;
+    }
+
+    .info-section {
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="container text-center">
+    <header>SAYFAMA HOŞGELDİNİZ</header>
   </div>
-</div>
- </div>
- <div class="container-fluid">
-  <div class="row" >
-      <div class="col-6" style="background-color: rgb(196, 228, 255); width: 700px; height: 700px;">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/pages/index.html">HAKKIMDA</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pages/seh.html">ŞEHRİM</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pages/miras.html">KÜLTÜREL MİRASIMIZ</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pages/ilgi.html">İLGİ ALANLARIM</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">İLETİŞİM</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pages/login.html">LOGIN</a></li>
+        </ul>
       </div>
-      <div class="col-6">
-       <div id="metin3" >
-           <h4 id="h4">İZmir plajları</h4>
-           <p style="margin-top: 60px;">
-            İZmir plajları
-         
-      </div>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="/image/Izmir-Saat-Kulesi-1.jpg" alt="İzmir Saat Kulesi">
+      <div class="number-text">1 / 6</div>
+      <div class="caption-text">İzmir Saat Kulesi</div>
+    </div>
+    <div class="slide">
+      <img src="/image/tarihi kemer alti carsi izmir.jpg" alt="Tarihi Kemeraltı Çarşısı">
+      <div class="number-text">2 / 6</div>
+      <div class="caption-text">Tarihi Kemeraltı Çarşısı</div>
+    </div>
+    <div class="slide">
+      <img src="/image/06_CesmeIlicaPlaji.jpg" alt="İzmir Plajları">
+      <div class="number-text">3 / 6</div>
+      <div class="caption-text">İzmir Plajları</div>
+    </div>
+    <div class="slide">
+      <img src="/image/boyoz.jpg" alt="Boyoz">
+      <div class="number-text">4 / 6</div>
+      <div class="caption-text">Boyoz</div>
+    </div>
+    <div class="slide">
+      <img src="/image/lokma.jpg" alt="Lokma">
+      <div class="number-text">5 / 6</div>
+      <div class="caption-text">Lokma</div>
+    </div>
+    <div class="slide">
+      <img src="/image/sardalya.jpg" alt="Sardalya">
+      <div class="number-text">6 / 6</div>
+      <div class="caption-text">Ünlü Ege Sardalyası</div>
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">❮</a>
+    <a class="next" onclick="changeSlide(1)">❯</a>
   </div>
-</div>
- </div>
 
+  <!-- BİLGİ KISIMLARI -->
+  <div class="container info-section">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="/image/Izmir-Saat-Kulesi-1.jpg" class="img-fluid rounded" alt="Saat Kulesi">
+      </div>
+      <div class="col-md-6">
+        <h4>İzmir Saat Kulesi</h4>
+        <p>İzmir'in simgelerinden biri olan tarihi saat kulesi, Konak Meydanı'nda yer alır.</p>
+      </div>
+    </div>
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="/image/tarihi kemer alti carsi izmir.jpg" class="img-fluid rounded" alt="Kemeraltı Çarşısı">
+      </div>
+      <div class="col-md-6">
+        <h4>Tarihi Kemeraltı Çarşısı</h4>
+        <p>İzmir'in tarihi alışveriş merkezi olan bu çarşı, çok sayıda dükkana ev sahipliği yapar.</p>
+      </div>
+    </div>
+    <!-- Devamını aynı mantıkla ekleyebilirsin -->
+  </div>
 
-   <div class="container-fluid">
-    <div class="row" style="background-color: rgb(196, 228, 255);">
-     <div class="col-4">
-        <h4 id="h41">İletişim Formu</h4>
-         <form action="">
-          <div id="ad">
-            <input type="text" id="ad" placeholder="İSMİNİZİ GİRİN">
-          </div>
-          <div id="soyad">
-            <input type="text" id="soyad" placeholder="SOYİSMİNİZİ GİRİN">
-          </div>
-          <div id="ileti">
-         <textarea name="ileti" id="ileti" cols="38" rows="10">İLETİNİZİ GİRİN</textarea>
-          </div>
-          <div class="btn" >
-            <button id="btn" >GÖNDER</button>
-          </div>
-         </form>
+  <script>
+    let slideIndex = 1;
+    showSlide(slideIndex);
 
-     </div>
-     <div class="col-8">
-        <h4 id="h42">İLETİŞİM BİLGİLERİM</h4>
-        <h6 id="h61">INSTRAGRAM </h6>
-        <div id="icon1">
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-        <h6 id="h62">FACEBOOK</h6>
-        <div id="icon2">
-            <i class="fa-brands fa-facebook"></i>
-        </div>
-        <h6 id="h63">YOUTUBE</h6>
-        <div id="icon3">
-            <i class="fa-brands fa-youtube"></i>
-        </div>
-        <h6 id="h64">GİTHUB</h6>
-        <div id="icon4">
-            <i class="fa-brands fa-github"></i>
-        </div>
+    function changeSlide(n) {
+      showSlide(slideIndex += n);
+    }
 
-        </div>
-</div>
-</div>
-
-
-   
-
-    <script src="script.js"></script>
-    <script src="/style/bootstrap.min.js"></script>
-    
+    function showSlide(n) {
+      const slides = document.getElementsByClassName("slide");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

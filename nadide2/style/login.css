@@ -1,0 +1,27 @@
+header {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: darkblue;
+      margin: 2rem 0;
+    }
+
+.login-container {
+    width: 90%;                /* Ekrana göre orantılı genişlik */
+    max-width: 400px;          /* Büyük ekranlarda taşmaz */
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+        /* Mavi kenarlık stilleri */
+        .form-control {
+            border: 2px solid #3399ff !important;
+            box-shadow: none;
+        }
+
+        .form-control:focus {
+            border-color: #0066cc !important;
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+        }
