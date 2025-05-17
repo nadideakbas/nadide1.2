@@ -3,7 +3,14 @@ header {
       font-weight: bold;
       color: darkblue;
       margin: 2rem 0;
+      text-align: center;
     }
+
+.navbar .container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
 .login-container {
     width: 90%;                /* Ekrana göre orantılı genişlik */
@@ -15,13 +22,13 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-        /* Mavi kenarlık stilleri */
-        .form-control {
-            border: 2px solid #3399ff !important;
-            box-shadow: none;
-        }
+/* Mavi kenarlık stilleri */
+.form-control {
+    border: 2px solid #3399ff !important;
+    box-shadow: none;
+ }
 
-        .form-control:focus {
-            border-color: #0066cc !important;
-            box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
-        }
+.form-control:focus {
+    border-color: #0066cc !important;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+    }

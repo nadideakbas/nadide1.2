@@ -1,0 +1,66 @@
+ body {
+      background-color: rgb(196, 228, 255);
+    }
+    .section-text {
+      margin-top: 2rem;
+    }
+    .img-fluid {
+      max-height: 400px;
+      object-fit: cover;
+      border: 4px solid #0db5fd; /* Mavi tonlu kalın bir border */
+      border-radius: 10px;        /* Köşeleri hafif yuvarla */
+    }
+    .nav-link:hover {
+      background-color: #0056b3;
+      color: white !important;
+    }
+    header {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: darkblue;
+      margin: 2rem 0;
+    }
+    /* Hover efektleri */
+    input:hover,
+    textarea:hover,
+    .form-check-input:hover,
+    button:hover {
+      background-color: #d4e3f5;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0b5ed7;
+      color: #fff;
+    }
+    
+    /* Responsive form kutusu */
+    .form-wrapper {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Sosyal medya ikonları */
+    .social-icons i {
+      font-size: 2rem;
+      margin-right: 15px;
+      color: #0d6efd;
+      transition: color 0.3s;
+    }
+
+    .social-icons i:hover {
+      color: #084298;
+    }
+
+/*responsive lık için*/
+@media (max-width: 576px) {
+  .form-wrapper {
+    padding: 15px;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+}
