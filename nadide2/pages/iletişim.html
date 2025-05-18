@@ -2,9 +2,9 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İLETİŞİM</title>
-   <link rel="stylesheet" href="/style/iletişim.css">
+  <link rel="stylesheet" href="/style/iletişim.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <style>
@@ -49,10 +49,10 @@
           <h4 class="text-center mb-4">İLETİŞİM FORMU</h4>
           <form action="sonuc.php" method="post" id="iletisimForm">
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="İsminizi girin" id="isim">
+              <input type="text" name="isim" class="form-control" placeholder="İsminizi girin" id="isim">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Soyisminizi girin" id="soyisim">
+              <input type="text" name="soyisim" class="form-control" placeholder="Soyisminizi girin" id="soyisim">
             </div>
 
             <!-- Cinsiyet -->
@@ -70,25 +70,25 @@
 
             <!-- Şehir -->
             <div class="mb-3">
-                <label for="sehir" class="form-label">Yaşadığınız şehir:</label>
-                <select class="form-select" id="sehir" name="sehir">
-                     <option value="">Bir şehir seçin</option>
-                     <option value="sakarya">Sakarya</option>
-                     <option value="istanbul">İstanbul</option>
-                     <option value="ankara">Ankara</option>
-                     <option value="izmir">İzmir</option>
-                </select>
+              <label for="sehir" class="form-label">Yaşadığınız şehir:</label>
+              <select class="form-select" id="sehir" name="sehir">
+                <option value="">Bir şehir seçin</option>
+                <option value="Sakarya">Sakarya</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+              </select>
             </div>
 
             <!-- Mesaj -->
             <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="İletinizi yazın"></textarea>
+              <textarea name="mesaj" class="form-control" rows="5" placeholder="İletinizi yazın" id="mesaj"></textarea>
             </div>
 
             <!-- Gönder -->
             <div class="d-flex justify-content-between gap-2">
               <button type="submit" class="btn btn-primary w-50" id="gonderBtn">Gönder</button>
-              <button type="reset" class="btn btn-primary w-50" id="silBtn">Sil</button>
+              <button type="reset" class="btn btn-primary w-50">Sil</button>
             </div>
           </form>
         </div>
@@ -99,16 +99,16 @@
         <h4>İLETİŞİM BİLGİLERİM</h4>
         <div class="social-icons my-4">
           <h6>INSTAGRAM</h6>
-          <a href="https://www.instagram.com/nadide_akbas" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i>
+          <a href="https://www.instagram.com/nadide_akbas" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
           </a>
           <h6>FACEBOOK</h6>
           <i class="fa-brands fa-facebook"></i>
           <h6>YOUTUBE</h6>
           <i class="fa-brands fa-youtube"></i>
           <h6>GITHUB</h6>
-          <a href="https://github.com/nadideakbas" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/nadideakbas" target="_blank">
+            <i class="fa-brands fa-github"></i>
           </a>
         </div>
       </div>
@@ -118,30 +118,27 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-  document.getElementById("gonderBtn").addEventListener("click", function () {
-  const isim = encodeURIComponent(document.getElementById("isim").value.trim());
-  const soyisim = encodeURIComponent(document.getElementById("soyisim").value.trim());
-  const cinsiyetInput = document.querySelector('input[name="cinsiyet"]:checked');
-  const cinsiyet = cinsiyetInput ? encodeURIComponent(cinsiyetInput.value) : "";
-  const sehir = encodeURIComponent(document.getElementById("sehir").value);
-  const mesaj = encodeURIComponent(document.querySelector("textarea").value.trim());
+    document.getElementById("iletisimForm").addEventListener("submit", function (e) {
+      const isim = document.getElementById("isim").value.trim();
+      const soyisim = document.getElementById("soyisim").value.trim();
+      const cinsiyetInput = document.querySelector('input[name="cinsiyet"]:checked');
+      const cinsiyet = cinsiyetInput ? cinsiyetInput.value : "";
+      const sehir = document.getElementById("sehir").value;
+      const mesaj = document.getElementById("mesaj").value.trim();
 
-  let hataMesaji = "";
+      let hataMesaji = "";
 
-  if (!isim) hataMesaji += "İsim alanı boş olamaz.\n";
-  if (!soyisim) hataMesaji += "Soyisim alanı boş olamaz.\n";
-  if (!cinsiyet) hataMesaji += "Cinsiyet seçilmelidir.\n";
-  if (!sehir) hataMesaji += "Lütfen bir şehir seçin.\n";
+      if (!isim) hataMesaji += "İsim alanı boş olamaz.\n";
+      if (!soyisim) hataMesaji += "Soyisim alanı boş olamaz.\n";
+      if (!cinsiyet) hataMesaji += "Cinsiyet seçilmelidir.\n";
+      if (!sehir) hataMesaji += "Lütfen bir şehir seçin.\n";
+      if (!mesaj) hataMesaji += "Mesaj alanı boş olamaz.\n";
 
-  if (hataMesaji) {
-    alert(hataMesaji);
-  } else {
-    // URL oluştur (query string)
-    const url = `sonuc.html?isim=${isim}&soyisim=${soyisim}&cinsiyet=${cinsiyet}&sehir=${sehir}&mesaj=${mesaj}`;
-    window.location.href = url;  // Sayfayı sonuç sayfasına yönlendir
-  }
-});
-</script>
+      if (hataMesaji) {
+        alert(hataMesaji);
+        e.preventDefault(); // Formu gönderme
+      }
+    });
+  </script>
 </body>
 </html>
-

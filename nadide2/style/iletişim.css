@@ -55,7 +55,7 @@
       color: #084298;
     }
 
-/*responsive lık için*/
+/*responsive için media query */
 @media (max-width: 576px) {
   .form-wrapper {
     padding: 15px;

@@ -6,13 +6,13 @@ $cinsiyet = $_POST['cinsiyet'] ?? '';
 $sehir = $_POST['sehir'] ?? '';
 $mesaj = $_POST['mesaj'] ?? '';
 
-// Basit boş alan kontrolü (daha detaylı doğrulama istersen ekleyebilirsin)
+// Basit boş alan kontrolü
 $hata = '';
 if (!$isim) $hata .= "İsim alanı boş bırakılamaz.<br>";
 if (!$soyisim) $hata .= "Soyisim alanı boş bırakılamaz.<br>";
 if (!$cinsiyet) $hata .= "Cinsiyet seçmelisiniz.<br>";
 if (!$sehir) $hata .= "Şehir seçmelisiniz.<br>";
-
+if (!$mesaj) $hata .= "Mesaj alanı boş bırakılamaz.<br>";
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -46,3 +46,4 @@ if (!$sehir) $hata .= "Şehir seçmelisiniz.<br>";
   </div>
 </body>
 </html>
+

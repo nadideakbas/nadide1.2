@@ -2,8 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAKKIMDA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KÜLTÜREL MİRASIMIZ</title>
   <link rel="stylesheet" href="/style/miras.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -11,6 +11,39 @@
     body {
       background-color: rgb(196, 228, 255);
     }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: rgb(196, 228, 255);
+    padding: 10px;
+
+    max-width: 1200px;     /* Geniş ekranlarda ortalanmış sabit genişlik */
+    margin: 0 auto;        /* Sayfa ortalama */
+    border-radius: 12px;   /* kenarları yumuşatma */
+  }
+
+  .grid-item {
+    background-color: rgb(196, 228, 255);
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+
+    
+  }
+
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
     </style>
 </head>
 <body>
@@ -39,59 +72,46 @@
     </div>
   </nav>
 
-   <div class="container-fluid">
-   <div class="row" >
-       <div class="col-6" style="background-color:rgb(196, 228, 255); width: 700px; height: 700px;">
-           <img id="img" src="boyanakilisesi.png" alt="" >
-       </div>
-       <div class="col-6">
-        <div id="metin" >
-            <h4 id="h4">futbol</h4>
-            <p style="margin-top: 60px;">
-              futbol..
 
 
+<div class="grid-container">
+  <!-- FUTBOL TAKIMLARI -->
+  <div class="grid-item">
+    <img src="/image/göztepe.jpg" alt="göztepe Fotoğrafı">
+    <img src="/image/bucaspor.jpg" alt="bucaspor Fotoğrafı">
+  </div>
+  <div class="grid-item" style="grid-column: span 2;">
+    <p>Futbol takımları mirası</p>
+  </div>
 
-            </p>
-        </div>
-          
-       </div>
-   </div>
- </div>
- <div class="container-fluid">
-  <div class="row" >
-      <div class="col-6" style="background-color:rgb(196, 228, 255) ; width: 700px; height: 700px;">
-          <img id="img" src="madarasüvarsi.webp" alt="" >
-      </div>
-      <div class="col-6">
-       <div id="metin2" >
-           <h4 id="h4">gezi</h4>
-           <p style="margin-top: 60px;">
-            gezi
-          
-           </p>
-       </div>
-         
-      </div>
+  <!-- Tarihi kalıntılar -->
+  <div class="grid-item">
+     <img src="/image/agora_antik_kenti_3.jpg" alt="agora Görseli 1">
+  </div>
+  <div class="grid-item">
+    <p>EFES ve AGORA</p>
+  </div>
+  <div class="grid-item">
+    <img src="/image/01_SelcukEfesAntikKenti (2).jpg" alt="efes Fotoğrafı">
+  </div>
+
+  <!-- Kültürel aktarım yemeklerimiz -->
+  <div class="grid-item" >
+    <img src="/image/zeytinyagli-enginar-1152x1536.jpeg" alt="yemek Görseli 1">
+  </div>
+  <div class="grid-item">
+    <p>enginar zeytin zeytinyağı</p>
+  </div>
+  <div class="grid-item">
+    <img src="/image/Deniz-borulcesi.jpg" alt="yemek Görseli 2">
+    <img src="/image/izmir-kumrusu.jpg" alt="yemek Görseli 3">
   </div>
 </div>
-<div class="container-fluid">
-  <div class="row" >
-      <div class="col-6" style="background-color: rgb(196, 228, 255); width: 700px; height: 700px;">
-          <img id="img" src="rilamanastırı.jpg" alt="" >
-      </div>
-      <div class="col-6">
-       <div id="metin3" >
-           <h4 id="h4">yemek</h4>
-           <p style="margin-top: 60px;">
-            yemek
-          
-           </p>
-       </div>
-         
-      </div>
-  </div>
-</div>
+
+
+
+
+   
 
     <script src="script.js"></script>
     <script src="/style/bootstrap.min.js"></script>

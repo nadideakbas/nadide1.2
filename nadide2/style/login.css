@@ -32,3 +32,6 @@ header {
     border-color: #0066cc !important;
     box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
     }
+    html {
+    overflow-y: scroll; /* Scrollbar'ı her zaman göster */
+    }
