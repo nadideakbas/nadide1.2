@@ -113,4 +113,10 @@
         font-size: 2rem;
       }
     }
+    .nav-link.active {
+    font-weight: bold;
+    background-color: #003d80; /* Koyu mavi arka plan */
+    color: white !important;   /* Yazı rengi beyaz */
+    border-radius: 5px;        /* Hafif köşe yuvarlama (isteğe bağlı) */
+  }
     

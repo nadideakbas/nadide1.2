@@ -11,43 +11,9 @@
     body {
       background-color: rgb(196, 228, 255);
     }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    background-color: rgb(196, 228, 255);
-    padding: 10px;
-
-    max-width: 1200px;     /* Geniş ekranlarda ortalanmış sabit genişlik */
-    margin: 0 auto;        /* Sayfa ortalama */
-    border-radius: 12px;   /* kenarları yumuşatma */
-  }
-
-  .grid-item {
-    background-color: rgb(196, 228, 255);
-    padding: 15px;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 10px;
-
-    
-  }
-
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  }
     </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <div class="container text-center">
     <header>SAYFAMA HOŞGELDİNİZ</header>
@@ -72,8 +38,6 @@
     </div>
   </nav>
 
-
-
 <div class="grid-container">
   <!-- FUTBOL TAKIMLARI -->
   <div class="grid-item">
@@ -81,7 +45,7 @@
     <img src="/image/bucaspor.jpg" alt="bucaspor Fotoğrafı">
   </div>
   <div class="grid-item" style="grid-column: span 2;">
-    <p>Futbol takımları mirası</p>
+    <p>Göztepe ve Bucaspor, İzmir’in yürek atışıdır. Taraftarların coşkusu, tarihi stadyumların heyecanı ve şehrin renkleriyle örülü bu takımlar, sadece spor değil bir aidiyet simgesidir. Göztepe’nin "Altın Kanaryalar" lakaplı destanı, Bucaspor’un yerel ruhuyla birleşir; bu sahalar, nesiller boyu İzmirlilerin ortak hafızasını taşır.</p>
   </div>
 
   <!-- Tarihi kalıntılar -->
@@ -89,7 +53,8 @@
      <img src="/image/agora_antik_kenti_3.jpg" alt="agora Görseli 1">
   </div>
   <div class="grid-item">
-    <p>EFES ve AGORA</p>
+    <p>Efes ve Agora: Zamana Direnen İzler
+Efes Antik Kenti, Roma’nın ihtişamını Celsus Kütüphanesi’nin dev sütunlarında yaşatırken, İzmir Agorası antik ticaretin nabzını bugüne taşır. Her taşında bir hikâye saklayan bu açık hava müzeleri, medeniyetlerin buluşma noktası olarak Anadolu’nun kültür mozaiğini yansıtır. UNESCO Dünya Mirası Efes, sadece geçmiş değil, insanlığın ortak mirasıdır.</p>
   </div>
   <div class="grid-item">
     <img src="/image/01_SelcukEfesAntikKenti (2).jpg" alt="efes Fotoğrafı">
@@ -97,24 +62,33 @@
 
   <!-- Kültürel aktarım yemeklerimiz -->
   <div class="grid-item" >
-    <img src="/image/zeytinyagli-enginar-1152x1536.jpeg" alt="yemek Görseli 1">
+    <img src="/image/zeytinyagli-enginar-1152x1536.jpeg" alt="enginar Görseli">
   </div>
   <div class="grid-item">
-    <p>enginar zeytin zeytinyağı</p>
+    <p>Ege Sofrasının Ölümsüz Lezzetleri
+Enginarın zarif yaprakları, zeytinyağının altın dokunuşuyla buluşur; Ege’nin sağlık iksiri sofralara konuk olur. Deniz börülcesi, tuzlu rüzgârın tadını taşırken, İzmir kumrusu fast-food kültürüne karşı bir başkaldırıdır. Bu lezzetler, anneden kıza aktarılan tariflerle yaşar; her lokma, bin yıllık tarım kültürünün izlerini taşır.</p>
   </div>
   <div class="grid-item">
-    <img src="/image/Deniz-borulcesi.jpg" alt="yemek Görseli 2">
-    <img src="/image/izmir-kumrusu.jpg" alt="yemek Görseli 3">
+    <img src="/image/Deniz-borulcesi.jpg" alt="denizbörülcesi Görseli">
+    <img src="/image/izmir-kumrusu.jpg" alt="kumru Görseli">
   </div>
 </div>
-
-
-
-
-   
-
     <script src="script.js"></script>
     <script src="/style/bootstrap.min.js"></script>
+<!-- nav barda seçimlerin belirli olması için -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop(); // sadece dosya adı
+
+    links.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
     
 </body>
 </html>

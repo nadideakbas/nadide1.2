@@ -23,3 +23,9 @@
     html {
       overflow-y: scroll; /* Scrollbar'ı her zaman göster */
     }
+.nav-link.active {
+    font-weight: bold;
+    background-color: #003d80; /* Koyu mavi arka plan */
+    color: white !important;   /* Yazı rengi beyaz */
+    border-radius: 5px;        /* Hafif köşe yuvarlama (isteğe bağlı) */
+  }

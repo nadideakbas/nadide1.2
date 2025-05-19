@@ -11,58 +11,13 @@
     body {
       background-color: rgb(196, 228, 255);
     }
-    
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    background-color: rgb(196, 228, 255) ;
-    padding: 10px;
-
-    max-width: 1200px;     /* Geniş ekranlarda ortalanmış sabit genişlik */
-    margin: 0 auto;        /* Sayfa ortalama */
-    border-radius: 12px;   /* kenarları yumuşatma */
-  }
-
-  .grid-item {
-    background-color:  rgb(196, 228, 255);
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: center; /* Yatay ortalama */
-    align-items: center;     /* Dikey ortalama */
-    text-align: center;
-
-  }
-
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-  @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-    .grid-item {
-    grid-column: auto !important; /* Sabit kolon geçişlerini iptal eder */
-  }
-  }
-
     </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <div class="container text-center">
     <header>SAYFAMA HOŞGELDİNİZ</header>
   </div>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
     <div class="container">
@@ -81,8 +36,6 @@
       </div>
     </div>
   </nav>
-
-
 <div class="grid-container">
   <!-- YÜZME -->
   <div class="grid-item">
@@ -91,30 +44,39 @@
   <div class="grid-item" style="grid-column: span 2;">
     <p>'Coğrafya kaderdir' sözüyle paralel olarak İzmir'de başlayan yüzme maceram, yüzme lisansımı alıncaya kadar devam etti. Pandemi süreci başlamadan önce boğaz yarışlarına katılma hayalleri kurarken pandemi ile beraber ara verdiğim yüzmeye kaldığım yerden devam edeceğim...   </p>
   </div>
-
   <!-- KAYAK -->
   <div class="grid-item" style="grid-column: span 2;">
-    <p>Doğu görevimde tanıştığım kayak sporunu iklim şartları bize kar sundukça öğrenmeye devam ettiğim bir spor. Amatör olarak devam ettiğim ve çok sevdiğim bu spora kuresel ısınma izin verirse her fırsatta yeni şeyler öğrenerek devam etmeyi istiyorum...</p>
+    <p>Doğu görevimde tanıştığım kayak sporu, iklim şartları elverdikçe öğrenmeye devam ettiğim bir spor. Amatör olarak yaptığım ve çok sevdiğim bu spora kuresel ısınma izin verirse her fırsatta yeni şeyler öğrenerek devam etmeyi istiyorum...</p>
   </div>
   <div class="grid-item">
     <img src="/image/kayak.jpeg" alt="Kayak Fotoğrafı">
   </div>
-
   <!-- BİLİM -->
   <div class="grid-item">
     <img src="/image/poster sunum.JPG" alt="Bilim Görseli 1">
   </div>
   <div class="grid-item">
-    <p>Hayatım boyunca öğrenmeyi hep çok sevdim. Meslek hayatına başladığım yıllarda katıldığım 'Turkısh Teacher Programme' ile İsviçre/CERN de birçok şey öğrendim. Yüksek lisansımda katıldığım kongrelerde bana eşlik eden eşim her daim öğrenme yolculuğumda yanımda olmuş ve zevkle bana eşlik etmiştir.</p>
+    <p>Hayatım boyunca öğrenmeyi hep çok sevdim. Meslek hayatına başladığım yıllarda katıldığım 'Turkısh Teacher Programme' ile İsviçre/CERN de birçok tecrübe edinerek farklı bakış açıları kazandım. Yüksek lisansımda katıldığım kongrelerde bana eşlik eden eşim her daim öğrenme yolculuğumda yanımda olmuş ve zevkle bana eşlik etmiştir.</p>
   </div>
   <div class="grid-item">
     <img src="/image/CERN.jpeg" alt="Bilim Görseli 2">
   </div>
-</div>
-
-     
-          
+</div>    
  <script src="/style/bootstrap.min.js"></script>
-    
+<!-- nav barda seçimlerin belirli olması için -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop(); // sadece dosya adı
+
+    links.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

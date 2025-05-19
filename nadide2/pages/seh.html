@@ -15,12 +15,10 @@
   </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <div class="container text-center">
     <header>SAYFAMA HOŞGELDİNİZ</header>
   </div>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
     <div class="container">
@@ -39,7 +37,6 @@
       </div>
     </div>
   </nav>
-
   <!-- SLIDER -->
   <div class="slideshow-container">
     <div class="slide">
@@ -75,32 +72,31 @@
     <a class="prev" onclick="changeSlide(-1)">❮</a>
     <a class="next" onclick="changeSlide(1)">❯</a>
   </div>
-
   <!-- BİLGİ KISIMLARI -->
   <div class="container info-section">
     <div class="row align-items-center mb-5">
         <h4>İzmir Saat Kulesi</h4>
-        <p>İzmir'in simgelerinden biri olan tarihi saat kulesi, Konak Meydanı'nda yer alır. 1901 yılında Sultan II. Abdülhamit'in tahta çıkışının 25. yıldönümü anısına inşa edilmiştir.</p>
+        <p>İzmir'in kalbi Konak Meydanı'nda yükselen bu zarif anıt, Osmanlı mimarisinin en güzel örneklerinden biri. 1901'de Sultan II. Abdülhamit'in taht yıldönümü şerefine inşa edilen kule, dört çeşmesi ve Avrupa etkileri taşıyan sütunlarıyla göz kamaştırıyor. Gün batımında altın rengine bürünen kule, hem tarihî bir sembol hem de şehrin buluşma noktası olarak nesillerdir İzmirlilere eşlik ediyor.</p>
     </div>
     <div class="row align-items-center mb-5">
         <h4>Tarihi Kemeraltı Çarşısı</h4>
-        <p>İzmir'in tarihi alışveriş merkezi olan bu çarşı, çok sayıda dükkana ev sahipliği yapar. 17. yüzyıldan günümüze kadar varlığını sürdüren çarşıda antika, halı, takı ve geleneksel el sanatları ürünleri bulabilirsiniz.</p>
+        <p>17. yüzyıldan beri İzmir'in ticaret ruhunu yaşatan bu labirent, renkli dükkânları, tarihi hanları ve mistik kokularıyla büyülüyor. El işi takılardan otantik halılara, taze baharatlardan antika eserlere kadar her detay, Ege'nin kültür mozaiğini yansıtıyor. Bir fincan Türk kahvesi eşliğinde kaybolacağınız bu çarşı, zamanda yolculuk vaat ediyor.</p>
     </div>
     <div class="row align-items-center mb-5">
         <h4>İzmir Plajları</h4>
-        <p>İzmir, Ege kıyısında yer alan güzel plajlarıyla ünlüdür. Çeşme, Alaçatı, Urla gibi bölgelerdeki plajlar hem yerli hem de yabancı turistlerin gözdesidir. Berrak denizi ve altın renkli kumsallarıyla unutulmaz tatil deneyimi sunar.</p>
+        <p>Ege'nin mavi sularına uzanan İzmir, Çeşme'nin kristal berraklığındaki Ilıca Plajı, Alaçatı'nın rüzgâr sörfü tutkunlarını cezbeden koyları ve Urla'nın saklı cennetleriyle bir yaz masalı sunuyor. Güneşin altın dokunuşu, kumların ılık hışırtısı ve denizin serinletici nefesi burada bir arada…</p>
     </div>
     <div class="row align-items-center mb-5">
         <h4>Boyoz</h4>
-        <p>İzmir'in geleneksel lezzeti boyoz, şehrin vazgeçilmez tatlarından biridir. Hamur tatlısı kategorisinde yer alan boyoz, genellikle kahvaltıda yumurta ile birlikte tüketilir ve İzmir'in kültürel mirasının önemli bir parçasıdır.</p>
+        <p>İzmir denilince akla gelen ilk lezzet! Kat kat açılan hamurun yağda pişmesiyle hazırlanan bu eşsiz atıştırmalık, genellikle gevrek bir yumurta ve çayla birlikte tüketiliyor. Sadece İzmir’de bulabileceğiniz bu özel tat, Yahudi mutfağından miras kalan bir kültür hazinesi.</p>
     </div>
     <div class="row align-items-center mb-5">
         <h4>Lokma</h4>
-        <p>İzmir lokması, şehrin en sevilen tatlılarından biridir. Kızgın yağda pişirilen ve şerbetle tatlandırılan bu geleneksel tatlı, özellikle bayram ve özel günlerde misafirlere ikram edilir.</p>
+        <p>Şerbetin şekerli dokunuşu, kızarmış hamurun çıtırlığı… İzmir sokaklarının vazgeçilmez tatlısı lokma, özellikle düğünlerde ve bayramlarda sevdiklerinizle paylaşmak için hazırlanıyor. Sıcak servis edilen bu lezzet, bir ısırıkta sizi çocukluğunuzun mutlu anılarına götürüyor.</p>
     </div>
     <div class="row align-items-center mb-5">
         <h4>Ünlü Ege Sardalyası</h4>
-        <p>İzmir Körfezi'nin en değerli ürünlerinden biri olan sardalya, şehrin mutfak kültürünün vazgeçilmez parçasıdır. Taze sardalya mevsiminde İzmirliler tarafından büyük bir keyifle tüketilir ve çeşitli şekillerde pişirilir.</p>
+        <p>Ege’nin lacivert sularından çıkan taze sardalya, İzmir mutfağının yıldızı! Izgara, buğulama veya tuzlama olarak hazırlanan bu balık, zeytinyağı ve limonla buluştuğunda adeta bir şölene dönüşüyor. Yaz akşamlarında deniz kenarında sardalya keyfi, İzmir’in olmazsa olmaz ritüeli!</p>
     </div>
   </div>
 
@@ -123,5 +119,20 @@
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<!-- nav barda seçimlerin belirli olması için -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop(); // sadece dosya adı
+
+    links.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

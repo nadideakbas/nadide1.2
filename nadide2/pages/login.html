@@ -10,7 +10,6 @@
         body {
             background-color: rgb(196, 228, 255);
         }
-        
     </style>
 </head>
 <body>
@@ -37,8 +36,6 @@
       </div>
     </div>
   </nav>
-
-
 <div class="login-container">
     <h3 class="text-center">Giriş Yap</h3>
     <form id="loginForm">
@@ -53,13 +50,11 @@
         <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
     </form>
 </div>
-
 <script>
     function epostaGecerliMi(eposta) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(eposta);
     }
-
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -78,8 +73,20 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         alert("E-posta adresi veya şifre hatalı. Lütfen tekrar deneyiniz.");
     }
 });
-
 </script>
+<!-- nav barda seçimlerin belirli olması için -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop(); // sadece dosya adı
 
+    links.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 </body>
 </html>

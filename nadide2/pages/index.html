@@ -14,12 +14,10 @@
     </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <div class="container text-center">
     <header>SAYFAMA HOŞGELDİNİZ</header>
   </div>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
     <div class="container">
@@ -38,7 +36,6 @@
       </div>
     </div>
   </nav>
-
   <!-- HAKKIMDA BÖLÜMLERİ -->
   <div class="container">
     <!-- Her bölüm için aynı yapıyı tekrar ettim -->
@@ -48,47 +45,56 @@
       </div>
       <div class="col-md-6 section-text">
         <h4 class="text-primary">KISA ÖZGEÇMİŞİM</h4>
-        <p>Steve Jobs’un Macintosh’un temellerini attığı, tüplü televizyonlara uzaktan kumanda taktığımız ve telefon açmak için telefon kulübesi aradığımız 1987 yılında Kırşehir'de dünyaya geldim.</p>
+        <p>Steve Jobs’un Macintosh’un temellerini attığı, tüplü televizyonlarda renkli yayınların başladığı ve telefonla konuşmak için telefon kulübelerinin arandığı bir dünyaya 1987 yılında gözlerimi açtım .</p>
       </div>
     </div>
-
     <div class="row align-items-center mb-5 flex-md-row-reverse">
       <div class="col-md-6 mb-3">
         <img src="/image/deumezuniyet.jpg" alt="deumezuniyet" class="img-fluid mx-auto d-block">
       </div>
       <div class="col-md-6 section-text">
-        <p>İzmir'de büyüdüm ve Dokuz Eylül Üniversitesi Kimya Öğretmenliği bölümünde eğitim aldım. iPhone 3 yeni gelmişti, biz ise dial-up modemle internet kovalıyorduk.</p>
+        <p>İzmir'de büyüdüm ve Dokuz Eylül Üniversitesi Kimya Öğretmenliği bölümünde beş yıl eğitim alarak Tezsiz Yüksek Lisansimi tamamladım. Tabi buarada iphone3 Türkiye'ye henüz gelmiş, camında 2048 kb yazan internet kafeler artmış ve müzik dinlemek için artık CD çalar yerine Mp3 çalarları kullanmaya başlamıştık.</p>
       </div>
     </div>
-
     <div class="row align-items-center mb-5">
       <div class="col-md-6 mb-3">
         <img src="/image/gtutez.jpg" alt="GTU Tez" class="img-fluid mx-auto d-block">
       </div>
       <div class="col-md-6 section-text">
-        <p>Gebze Teknik Üniversitesi’nde tezli yüksek lisans yaparken eşimle tanıştım. Tez savunmamda onun da cübbe giymesini istedim çünkü bu başarı onun da hakkıydı.</p>
+        <p>Mezun olduktan bir süre sonra atandım ve doğu görevimi tamamladım. Gebze Teknik Üniversitesi'nde tezli yüksek lisansıma devam edebilmek için Kocaeli/Çayırova ilçesine tayin oldum. Her konuda beni destekleyen, düşüncelerini benimle paylaşıp yoluma ışık tutan eşimle tanıştım. O kadar çok destek oldu ki yüksek lisans tez savunmamda mezuniyet cübbesini en az benim kadar hak ettiği için ona da giydirdim.</p>
       </div>
     </div>
-
     <div class="row align-items-center mb-5 flex-md-row-reverse">
       <div class="col-md-6 mb-3">
         <img src="/image/aile.JPG" alt="Aile" class="img-fluid mx-auto d-block">
       </div>
       <div class="col-md-6 section-text">
-        <p>Covid döneminde ailemize oğlumuz katıldı. Mezuniyet fotoğraflarımızı artık akıllı telefonlarımızla çekiyorduk.</p>
+        <p>Neyse ki artık mezuniyet fotoğraflarımızı dijital fotoğraf makinesi ile değil akıllı telefonlarımızla çekiyorduk. Teknoloji ve internetin tüm insanlık için bambaşka bir anlam taşımaya başladığı covid salgını döneminde ailemize oğlumuz katıldı.</p>
       </div>
     </div>
-
     <div class="row align-items-center mb-5">
       <div class="col-md-6 mb-3">
         <img src="/image/saü.jpeg" alt="SAÜ" class="img-fluid mx-auto d-block">
       </div>
       <div class="col-md-6 section-text">
-        <p>2023 yılında üniversite affı ile yeniden başladığım eğitim yolculuğumda artık oğlum da yanımda. Öğrenim hayatım yapay zekâ, blockchain ve süper bilgisayarların çağında devam ediyor.</p>
+        <p>2023 yılında YÖK un verdiği üniversite affı ile yeniden başladığım üniversite heyecanında bu defa eşimle birlikte oğlum da yanımda. Kara tahta karşısında başlayan öğrenim hayatıma yapay zekaların, block chainlerin, süper bilgisayarların havada uçuştuğu bir dünyada devam ediyorum.</p>
       </div>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<!-- nav barda seçimlerin belirli olması için -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop(); // sadece dosya adı
+
+    links.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 </body>
 </html>

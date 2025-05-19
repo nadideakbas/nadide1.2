@@ -20,3 +20,50 @@
       color: darkblue;
       margin: 2rem 0;
     }
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: rgb(196, 228, 255) ;
+    padding: 10px;
+
+    max-width: 1200px;     /* Geniş ekranlarda ortalanmış sabit genişlik */
+    margin: 0 auto;        /* Sayfa ortalama */
+    border-radius: 12px;   /* kenarları yumuşatma */
+  }
+
+  .grid-item {
+    background-color:  rgb(196, 228, 255);
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center;     /* Dikey ortalama */
+    text-align: center;
+
+  }
+
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #0db5fd; /* Grid kutusunun etrafına border */
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    .grid-item {
+    grid-column: auto !important; /* Sabit kolon geçişlerini iptal eder */
+  }
+  }
+  .nav-link.active {
+    font-weight: bold;
+    background-color: #003d80; /* Koyu mavi arka plan */
+    color: white !important;   /* Yazı rengi beyaz */
+    border-radius: 5px;        /* Hafif köşe yuvarlama (isteğe bağlı) */
+  }

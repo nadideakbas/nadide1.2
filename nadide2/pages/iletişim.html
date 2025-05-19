@@ -47,7 +47,7 @@
       <div class="col-12 col-md-6 mb-5">
         <div class="form-wrapper">
           <h4 class="text-center mb-4">İLETİŞİM FORMU</h4>
-          <form action="sonuc.php" method="post" id="iletisimForm">
+          <form action="/sonucPHP/sonuc.php" method="post" id="iletisimForm">
             <div class="mb-3">
               <input type="text" name="isim" class="form-control" placeholder="İsminizi girin" id="isim">
             </div>
@@ -140,5 +140,33 @@
       }
     });
   </script>
+<!-- nav barda seçimlerin belirli olması için -->
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop(); // sadece dosya adı
+
+    links.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = decodeURIComponent(window.location.pathname.split("/").pop().toLowerCase());
+
+    links.forEach(link => {
+      const linkPath = decodeURIComponent(link.getAttribute("href").split("/").pop().toLowerCase());
+
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 </body>
 </html>
