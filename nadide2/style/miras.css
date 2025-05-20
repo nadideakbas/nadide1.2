@@ -49,6 +49,9 @@
   }
 
   .grid-item img {
+
+    display: block;
+    margin: 0 auto auto; /* ortala ve aralarına boşluk verme */
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -67,3 +70,17 @@
     color: white !important;   /* Yazı rengi beyaz */
     border-radius: 5px;        /* Hafif köşe yuvarlama (isteğe bağlı) */
   }
+  .grid-item-multi {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid-item-multi img {
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  height: 250px;
+  object-fit: cover;
+}
+
