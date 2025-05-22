@@ -104,47 +104,46 @@
 
   <!-- OMDb API JavaScript -->
   <script>
-    let movieNameRef = document.getElementById("movie-name");
-    let searchBtn = document.getElementById("search-btn");
-    let result = document.getElementById("result");
-    let key = "6ce24d7d"; // OMDb API key
+  let movieNameRef = document.getElementById("movie-name");
+  let searchBtn = document.getElementById("search-btn");
+  let result = document.getElementById("result");
+  let filmApi = "https://www.omdbapi.com/?apikey=569505d";
 
-    let getMovie = () => {
-      let movieName = movieNameRef.value.trim();
-      let url =`https://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+  async function getMovie(name) {
+    let movieName = name.value.trim();
 
-      if (movieName.length === 0) {
-        result.innerHTML = <h3 class="msg">Lütfen bir film adı girin.</h3>;
-        return;
+    if (movieName.length === 0) {
+      result.innerHTML = `<h3 class="msg">Lütfen bir film adı girin.</h3>`;
+      return;
+    }
+
+    try {
+      const response = await fetch(filmApi + `&t=${movieName}`);
+      const data = await response.json();
+
+      if (data.Response === "True") {
+        result.innerHTML = `
+          <div class="info">
+            <img src="${data.Poster}" class="img-fluid mb-3" alt="Poster">
+            <h2>${data.Title}</h2>
+            <p><strong>IMDb Puanı:</strong> ${data.imdbRating}</p>
+            <p><strong>Yıl:</strong> ${data.Year}</p>
+            <p><strong>Süre:</strong> ${data.Runtime}</p>
+            <p><strong>Tür:</strong> ${data.Genre}</p>
+            <p><strong>Konu:</strong> ${data.Plot}</p>
+            <p><strong>Oyuncular:</strong> ${data.Actors}</p>
+          </div>
+        `;
+      } else {
+        result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
       }
+    } catch (error) {
+      result.innerHTML = `<h3 class="msg">Bir hata oluştu.</h3>`;
+    }
+  }
 
-      fetch(url)
-        .then((resp) => resp.json())
-        .then((data) => {
-          if (data.Response === "True") {
-            result.innerHTML = `
-              <div class="info">
-                <img src="${data.Poster}" class="img-fluid mb-3" alt="Poster">
-                <h2>${data.Title}</h2>
-                <p><strong>IMDb Puanı:</strong> ${data.imdbRating}</p>
-                <p><strong>Yıl:</strong> ${data.Year}</p>
-                <p><strong>Süre:</strong> ${data.Runtime}</p>
-                <p><strong>Tür:</strong> ${data.Genre}</p>
-                <p><strong>Konu:</strong> ${data.Plot}</p>
-                <p><strong>Oyuncular:</strong> ${data.Actors}</p>
-              </div>
-            `;
-          } else {
-            result.innerHTML = <h3 class="msg">${data.Error}</h3>;
-          }
-        })
-        .catch(() => {
-          result.innerHTML = <h3 class="msg">Bir hata oluştu.</h3>;
-        });
-    };
-
-    searchBtn.addEventListener("click", getMovie);
-  </script>
+  searchBtn.addEventListener("click", () => getMovie(movieNameRef));
+</script>
 
 
 </body>
