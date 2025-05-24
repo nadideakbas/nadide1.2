@@ -34,7 +34,7 @@ $gonderimZamani = date('d.m.Y H:i:s');
           <?php endforeach; ?>
         </ul>
       </div>
-      <a href="iletişimformu/pages/iletişim.html" class="btn btn-primary">Geri Dön</a>
+      <a href="index.html" class="btn btn-primary">Geri Dön</a>
 
     <?php else: ?>
       <h3 class="mb-4">Form Başarıyla Gönderildi</h3>
